@@ -1,0 +1,13 @@
+--- Main play
+
+- hosts: localhost
+  connection: local
+  gather_facts: true
+  pre_tasks:
+  - name: When did the ROLE start
+    raw: date > ~/start_time.log
+  roles:
+    - rds
+  post_tasks:
+  - name: When did the ROLE end
+    raw: date > ~/end_time.log

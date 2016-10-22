@@ -1,0 +1,13 @@
+--- # Upgrading mysql verion 5.5 to  version 5.6
+
+- name: Upgrade to version 5.6
+  local_action:
+    module: rds
+    command: modify
+    instance_name: db-read-replica
+    region: "{{ region }}"
+    db_engine: "{{ db_engine }}"
+    upgrade2: yes
+    engine_version: 5.6.27
+    apply_immediately: yes
+

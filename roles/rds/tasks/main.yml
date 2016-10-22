@@ -1,0 +1,10 @@
+- include_vars: vars.yml
+- include_vars: secret.yml
+- include: master.yml
+  tags: master 
+- include: replica.yml
+  tags: replica
+- include: facts.yml
+  tags: facts
+- include: upgrade.yml
+  tags: upgrade

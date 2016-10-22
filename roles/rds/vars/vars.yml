@@ -1,0 +1,11 @@
+instance_name: codin-test
+instance_type: db.t2.micro
+region: us-east-1
+source_instance: codin-test
+db_name: codin
+db_engine: MySQL
+engine_version: 5.5.46
+vpc_security_groups: sg-a9f1eace
+subnet: mysql
+size: 10
+#iops: 1000

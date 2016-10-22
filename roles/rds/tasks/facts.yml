@@ -1,0 +1,7 @@
+- rds:
+    command: facts
+    instance_name: db-read-replica
+    region: us-east-1
+  register: facts_info
+
+- local_action: copy content={{ facts_info }} dest=./facts/facts

@@ -1,0 +1,11 @@
+--- # Creating a read replica from master.
+
+- name: Create read-replica
+  local_action:
+    module: rds
+    command: replicate
+    instance_name: db-read-replica
+    source_instance: "{{ source_instance }}"
+    region: "{{ region }}"
+    wait: yes
+    wait_timeout: 3600
