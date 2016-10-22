@@ -11,3 +11,4 @@ This is a playbook which can be used as an example to create mysql master,read r
    `ansible-playbook -vvv rds.yml --ask-vault-pass`
    Use the pass `codin` to get the access :P
 
+* The most imp part, copy the file under /hack dir to their respective locations to enable major upgrading of mysql which is by   default disabled in rds module for ansible.
